@@ -169,7 +169,7 @@
 		/**
 		 *  Creates user
 		 */
-		public function createUser($userName, $password, $name, $email, $org, $country)
+		public function createUser($userName, $password, $name, $email="", $org="", $country="")
 		{
 			try 
 			{
