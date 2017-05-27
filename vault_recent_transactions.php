@@ -4,7 +4,6 @@
     require_once('check-login.php');
 	include_once "config.php";
 	include_once "resources.php";
-	include_once "MCHelper.php";
 
 	$dbHelper = new DBHelper();
 	$items = $dbHelper->getRecentVaultItemsForUser($_SESSION['address'], 20);

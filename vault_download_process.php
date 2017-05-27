@@ -2,7 +2,6 @@
 	session_start();
     ob_start();
     require_once('check-login.php');
-	require_once('MCHelper.php');
 	require_once('config.php');
 	require_once('resources.php');
 	require_once('helperFunctions.php');
