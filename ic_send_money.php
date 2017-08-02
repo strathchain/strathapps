@@ -20,7 +20,7 @@
 
 <div class="container theme-showcase" role="main">
 
-    <h2>Yobi-Wallet</h2>
+    <h2>StrathWallet</h2>
     <br>
 
     <div class="row">
@@ -54,7 +54,7 @@
         <div class="col-md-10">
             <section class="panel panel-primary">
                 <header class="panel-heading">
-                    <h2 class="panel-title">Send Yobicoins with Message</h2>
+                    <h2 class="panel-title">Send Strathcoins with Message</h2>
                 </header>
                 <div class="panel-body">
                     <form>
@@ -76,7 +76,7 @@
                         <br/>
 
                         <div class="row form-group">
-                            <label class="col-sm-3 control-label"><strong>Yobicoins </strong></label>
+                            <label class="col-sm-3 control-label"><strong>Strathcoins </strong></label>
                             <div class="col-sm-9">
                                 <input id="txtUnitsSWM" type="number" step="any" placeholder="" class="form-control" value="1" width=30 />
                             </div>

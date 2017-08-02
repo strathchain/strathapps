@@ -19,7 +19,7 @@
 
 <div class="container theme-showcase" role="main">
 
-    <h2>Yobi-Wallet</h2>
+    <h2>StrathWallet</h2>
     <br>
 
     <div class="row">

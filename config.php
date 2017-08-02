@@ -1,12 +1,12 @@
 <?php
 
 	/**
-	 *  YOBICOIN PARAMETERS
+	 *  STRATHCOIN PARAMETERS
 	 */
 	class AssetParams
 	{
 		const INIT_QTY = 1000;
-		const ASSET_NAME = "yobicoin";
+		const ASSET_NAME = "strathcoin";
 	}
 
 	/**
@@ -25,7 +25,7 @@
 		public static function init(){
 	        self::$hostName = $_SERVER['SERVER_ADDR'];
 			self::$PORT = "2750";
-			self::$CHAIN_NAME = "Yobichain";
+			self::$CHAIN_NAME = "strathchain";
 			self::$TX_URL_PREFIX = "http://".self::$hostName.":".self::$PORT."/".self::$CHAIN_NAME."/tx/";
 			self::$BLOCK_URL_PREFIX = "http://".self::$hostName.":".self::$PORT."/".self::$CHAIN_NAME."/block/";
 			self::$ADDRESS_URL_PREFIX = "http://".self::$hostName.":".self::$PORT."/".self::$CHAIN_NAME."/address/";
@@ -41,7 +41,7 @@
 	class WebServerParams
 	{		
 		public static $hostName;				// IP address or Host Name of the Web Server 
-		const PRIMECHAIN_ROOT_DIR = "yobiapps";	// Root directory of Primechain
+		const PRIMECHAIN_ROOT_DIR = "strathapps";	// Root directory of Primechain
 
 		public static function init(){
 	        self::$hostName = $_SERVER['SERVER_ADDR'];
