@@ -31,7 +31,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  
+
     <body>
 
     <!-- Fixed navbar -->
@@ -48,15 +48,16 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
+            <?php /* we disable the vault and contracts systems for now, they are surplus to requirements
             <li class="dropdown active">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PrimeVault <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">StrathVault <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="vault_upload.php">Upload</a></li>
                 <li><a href="vault_download.php">Download</a></li>
               </ul>
             </li>
             <li class="dropdown active">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PrimeContract <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">StrathContract <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="contract_upload.php">Create Contract</a></li>
                 <li><a href="contracts_history.php">History</a></li>
@@ -65,6 +66,7 @@
                 <li><a href="contract_view_details.php">Check Contract</a></li>
               </ul>
             </li>
+            */ ?>
             <li class="dropdown active">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">StrathWallet <span class="caret"></span></a>
               <ul class="dropdown-menu">

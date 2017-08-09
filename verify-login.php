@@ -20,7 +20,7 @@
 			$dbHelper = new DBHelper(session_id(), $_SERVER);
 
 			$userCredentials = $dbHelper->getUserCredentials($userName);
-			
+
 			if(password_verify($password, $userCredentials[Literals::USER_CREDENTIALS_FIELD_NAMES['PASSWORD_HASH']]))
 			{
 				$userDetails = $dbHelper->getUserDetails($userName);
@@ -31,7 +31,7 @@
 				$_SESSION['address'] = $userAddress;
 				$_SESSION['loggedin'] = true;
 
-				header("location:vault_upload.php");
+				header("location:ic_send_money.php");
 			}
 			else
 			{

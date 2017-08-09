@@ -12,13 +12,13 @@
 	function generatePassword()
 	{
 	    $range = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ01234567129!@#$%^&*()_+-=?";
-	    $pwd = array(); 
-	    $rangelength = strlen($range) - 1; 
+	    $pwd = array();
+	    $rangelength = strlen($range) - 1;
 	    for ($i = 0; $i < 12; $i++) {
 	        $n = rand(0, $rangelength);
 	        $pwd[] = $range[$n];
 	    }
-	    return implode($pwd); 
+	    return implode($pwd);
 	}
 
 	function generateGUID()
@@ -47,7 +47,7 @@
 	{
 		return preg_match('/^[a-zA-Z ]*$/', $name);
 	}
-	
+
 	function validateEmail($email)
 	{
 		return filter_var($email, FILTER_VALIDATE_EMAIL);
@@ -161,7 +161,7 @@
 				else
 					$sender = $param_value;
 			}
-			
+
 		}
 
 		return $recipient;
@@ -200,7 +200,7 @@
 
 				}
 			}
-			
+
 		}
 
 		return $assetsAmount;
@@ -213,17 +213,17 @@
 	*/
 	function printTransactionBasicDetailsVertically($transaction, $userAddress, $assetRef="")
 	{
-		
+
 		$printDetails = "<div class='table-responsive scrollable has-scrollbar scrollable-content ' data-plugin-scrollable><table class='table table-bordered table-hover table-condensed mb-none'>";
 
 		foreach($transaction as $param_name=>$param_value)
-			{		
+			{
 				if($param_name=="txid")
 				{
 					$txId = $param_value;
 				}
 				else if($param_name=="balance")
-				{					
+				{
 					$assets = array();
 
 					foreach($param_value["assets"] as $index=>$value)
@@ -247,7 +247,7 @@
 							}
 						}
 
-					}					
+					}
 				}
 				else if($param_name=="blockhash")
 				{
@@ -295,7 +295,7 @@
 		$printDetails .= "<tr><th>Block Hash</th><td>".$blockHash."</td></tr>";
 		$printDetails .= "<tr><th>Block Index</th><td>".$blockIndex."</td></tr>";
 		$printDetails .= "<tr><th>Time</th><td>".date('m-d-Y'.',  '.'h:i:s a', $time)."</td></tr>";
-		
+
 		$printDetails .= "</table></div>";
 		return $printDetails;
 	}
@@ -306,7 +306,7 @@
 	*/
 	function printTransactionsHistory($transactions, $userAddress, $assetName="")
 	{
-		date_default_timezone_set("Asia/Kolkata");
+		date_default_timezone_set("Europe/London");
 
 		$printDetails = "<div class='table-responsive scrollable has-scrollbar scrollable-content ' data-plugin-scrollable><table class='table table-bordered table-hover table-condensed mb-none'>";
 		$printDetails .= "<tr>";
@@ -328,14 +328,14 @@
 		foreach ($transactions_filtered as $txIndex=>$transaction) {
 
 			foreach($transaction as $param_name=>$param_value)
-			{		
+			{
 				if($param_name=="txid")
 				{
 					$txId = $param_value;
 				}
 				else if($param_name=="balance")
 				{
-					
+
 					$assets = array();
 
 					foreach($param_value["assets"] as $index=>$value)
@@ -360,7 +360,7 @@
 						}
 
 					}
-					
+
 				}
 				else if($param_name=="blockhash")
 				{
@@ -419,7 +419,7 @@
 			$printDetails .= "<td>"."<a class='mb-xs mt-xs mr-xs btn btn-primary' href='".ExplorerParams::$TX_URL_PREFIX.$txId."' target='_blank'>More details</a>"."</td>";
 			$printDetails .= "</tr>";
 		}
-			
+
 		$printDetails .= "</table></div>";
 		return $printDetails;
 	}
@@ -431,11 +431,11 @@
 	function printStreamTransactionBasicDetailsVertically($transaction)
 	{
 		//global $explorer_tx_url,$explorer_address_url,$explorer_block_url;
-	
+
 		$printDetails = "<div class='table-responsive scrollable has-scrollbar scrollable-content ' data-plugin-scrollable><table class='table table-bordered table-hover table-condensed mb-none'>";
 
 		foreach($transaction as $param_name=>$param_value)
-		{		
+		{
 			if($param_name=="txid")
 			{
 				$txId = $param_value;
@@ -443,7 +443,7 @@
 			else if($param_name=="myaddresses" || $param_name=="publishers")
 			{
 				$publisherAddress = $param_value;
-			}			
+			}
 			else if($param_name=="blockhash")
 			{
 				$blockHash = $param_value;
@@ -472,11 +472,11 @@
 		}
 
 		$printDetails .= "<tr height=25><th width=150 style='border-style: ridge;'>Transaction Id</th><td align='left' style='border-style: ridge;'>"."<a href='".ExplorerParams::$TX_URL_PREFIX."$txId' target='_new'>".$txId."</a>"."</td></tr>";
-		
+
 		$printDetails .= "<tr height=25><th style='border-style: ridge;'>Uploader</th><td align='left' style='border-style: ridge;'>"."<a href='".ExplorerParams::$ADDRESS_URL_PREFIX.$publisherAddress[0]."' target='_new'>".$publisherAddress[0]."</a>"."</td></tr>";
-		
+
 		$printDetails .= "<tr height=25><th width=150 style='border-style: ridge;'>Block Hash</th><td align='left' style='border-style: ridge;'>".(isset($blockHash) ? "<a href='".ExplorerParams::$BLOCK_URL_PREFIX."$blockHash' target='_new'>".$blockHash."</a>" : "")."</td></tr>";
-		
+
 		$printDetails .= "<tr height=25><th width=150 style='border-style: ridge;'>Confirmations</th><td align='left' style='border-style: ridge;'>".$confirmations."</td></tr>";
 
 		// $printDetails .= (is_string($data[0])) ? "<tr height=25><th width=150 style='border-style: ridge;'>Data</th><td align='left' style='border-style: ridge;'>".json_encode(json_decode(hex2bin($data[0])), JSON_PRETTY_PRINT)."</td></tr>" : "";
@@ -494,7 +494,7 @@
 
 		foreach($arr as $item=>$value)
 		{
-			$str = "";		
+			$str = "";
 
 			for ($i = 0; $i <= $lvl; $i++)
 			{

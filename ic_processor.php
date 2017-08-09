@@ -12,17 +12,17 @@
         include_once 'resources.php';
         include_once 'dbhelper.php';
 
-        date_default_timezone_set("Asia/Kolkata");
+        date_default_timezone_set("Europe/London");
 
         if(isset($_POST['fromaddr'])){
-            if($_POST['fromaddr'] != $_SESSION['address']){ 
-                throw new Exception("This address (".$_POST['fromaddr'].") does not belong to you."); 
+            if($_POST['fromaddr'] != $_SESSION['address']){
+                throw new Exception("This address (".$_POST['fromaddr'].") does not belong to you.");
             }
-            $userAddress = $_POST['fromaddr']; 
-        } 
-        else if(isset($_SESSION['address'])){ 
+            $userAddress = $_POST['fromaddr'];
+        }
+        else if(isset($_SESSION['address'])){
             $userAddress = $_SESSION['address'];
-        } 
+        }
         else {
             $userAddress = "";
         };
@@ -65,7 +65,7 @@
                     echo "<h3>Block details</h3>";
                     echo printBlockDetailsVertically($blockDetails);
                 }
-                
+
             }
         }
         else if($cmd == Literals::MULTICHAIN_COMMANDS_CODES['GET_TRANSACTIONS_HISTORY'])
@@ -84,24 +84,24 @@
             if($cmd == Literals::MULTICHAIN_COMMANDS_CODES['SWM'])
             {
                 if ($units<=0.0) {
-                    throw new Exception("Amount cannot be zero or negative.", 1);                        
+                    throw new Exception("Amount cannot be zero or negative.", 1);
                 }
 
                 $txId = $dbHelper->sendAssetWithMessage($userAddress, $toAddress, AssetParams::ASSET_NAME, $units, bin2hex($metadata));
 
                 echo "<strong><font color='green'>"."Transaction successful.</font> <br/><font color='green'>Transaction ID : </font>"."<a href='".ExplorerParams::$TX_URL_PREFIX.$txId."' target='_new'>$txId</a>"."<br/><font color='green'>Message Sent : </font>".$metadata."<br/><font color='green'>".strval(number_format($units, 2))."</font> Strathcoins transferred"."</strong>";
             }
-            else 
+            else
             {
-                throw new Exception("Error Processing Request", 1);                    
+                throw new Exception("Error Processing Request", 1);
             }
         }
 
     }
     catch(Exception $ex)
-    {     
+    {
         echo "<h4><font color='red'>Error: ".$ex->getMessage()."</font></h4>";
     }
-	
+
 	ob_end_flush();
 ?>

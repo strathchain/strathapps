@@ -1,17 +1,17 @@
 <?php
 	session_start();
-    ob_start();
-    require_once('check-login.php');
+  ob_start();
+  require_once('check-login.php');
 	require_once('dbhelper.php');
 	require_once('resources.php');
 	require_once('helperFunctions.php');
-    require_once('config.php');
+  require_once('config.php');
 
 	try
 	{
 		if (isset($_GET['txid']))
 		{
-			
+
 			$txId = $_GET['txid'];
 			$uploader_address = $_GET['publisher'];
 			$dbHelper = new DBHelper();
@@ -34,7 +34,7 @@
 
 			$downloadURL = "data:".$fileDataType.";base64,".base64_encode(pack('H*', $fileContentHex));
 			echo "<script>window.onload=function(){window.open('".$downloadURL."', '_self')}</script>";
-			
+
 		}
 		else
 		{

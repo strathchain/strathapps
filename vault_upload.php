@@ -9,7 +9,7 @@
 
 <div class="container theme-showcase" role="main">
 
-    <h2>PrimeVault</h2>
+    <h2>StrathVault</h2>
     <br>
     <div class="row">
         <div class="col-md-10">
@@ -31,7 +31,7 @@
                                     <span class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                     </span>
-                                    <input class="form-control" type="datetime-local" id="dou" name="dou" value="<?php date_default_timezone_set('Asia/Kolkata'); echo str_replace("/", "T", date('Y-m-d/H:i:s')); ?>" required /> 
+                                    <input class="form-control" type="datetime-local" id="dou" name="dou" value="<?php date_default_timezone_set('Europe/London'); echo str_replace("/", "T", date('Y-m-d/H:i:s')); ?>" required />
                                 </div>
                             </div>
                         </div><br/>
@@ -42,7 +42,7 @@
                                 <input id="file" name="filename" class="input-file" type="file" accept="image/*,application/pdf">
                             </div>
                         </div><br/>
-                        
+
                         <div class="row form-group">
                             <label class="col-md-4 control-label" for="desc">Description</label>
                             <div class="col-md-8">

@@ -10,7 +10,7 @@
 <div class="container theme-showcase" role="main">
 
     <header class="page-header">
-        <h2>PrimeContract</h2>
+        <h2>StrathContract</h2>
     </header>
 
     <div class="row">

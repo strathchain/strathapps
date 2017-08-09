@@ -10,7 +10,7 @@
 <div class="container theme-showcase" role="main">
 
     <header class="page-header">
-        <h2>PrimeContract</h2>
+        <h2>StrathContract</h2>
     </header>
 
     <div class="row">
@@ -51,7 +51,7 @@
                                         echo "<td><a class='mb-xs mt-xs mr-xs btn btn-primary' target='_new' href='contract_upload_details.php?contractid=".$contractDetails[Literals::CONTRACT_DETAILS_FIELD_NAMES['CONTRACT_ID']]."'>View</a></td>";
 
                                         echo "<td><a class='mb-xs mt-xs mr-xs btn btn-success' target='_new' href='contract_invite.php?contractid=".$contractDetails[Literals::CONTRACT_DETAILS_FIELD_NAMES['CONTRACT_ID']]."'>Invite Signees</a></td>";
-                                        
+
                                         echo "</tr>";
                                     }
 
@@ -79,7 +79,7 @@
 
 
                                         echo "<td><a class='mb-xs mt-xs mr-xs btn btn-primary' target='_new' href='contract_upload_details.php?contractid=".$contractDetails[Literals::CONTRACT_DETAILS_FIELD_NAMES['CONTRACT_ID']]."'>View</a></td>";
-                                        
+
                                         echo "</tr>";
                                     }
 

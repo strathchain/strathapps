@@ -23,8 +23,8 @@
 		public static $ADDRESS_URL_PREFIX;
 
 		public static function init(){
-	        self::$hostName = $_SERVER['SERVER_ADDR'];
-			self::$PORT = "2750";
+	    self::$hostName = $_SERVER['SERVER_ADDR'];
+			self::$PORT = "8080";
 			self::$CHAIN_NAME = "strathchain";
 			self::$TX_URL_PREFIX = "http://".self::$hostName.":".self::$PORT."/".self::$CHAIN_NAME."/tx/";
 			self::$BLOCK_URL_PREFIX = "http://".self::$hostName.":".self::$PORT."/".self::$CHAIN_NAME."/block/";
@@ -39,9 +39,9 @@
 	* Web server parameters
 	*/
 	class WebServerParams
-	{		
-		public static $hostName;				// IP address or Host Name of the Web Server 
-		const PRIMECHAIN_ROOT_DIR = "strathapps";	// Root directory of Primechain
+	{
+		public static $hostName;				// IP address or Host Name of the Web Server
+		const PRIMECHAIN_ROOT_DIR = "strathapps";	// Root directory of StrathChain
 
 		public static function init(){
 	        self::$hostName = $_SERVER['SERVER_ADDR'];
@@ -56,11 +56,11 @@
 	class MultichainParams
 	{
 		const HOST_NAME = "localhost";
-		const RPC_PORT = "6820";
+		const RPC_PORT = "9442";
 		const RPC_USER = "multichainrpc";
-		const RPC_PASSWORD = "CYw4pp91TF3Tm8pNhgbu4hFgZiRQNccbCnGhHXRuhfee";
+		const RPC_PASSWORD = "hFgZiRQNccbCnGhHXRuhfeeCYw4pp91TF3Tm8pNhgbu4";
 		const MANAGER_ADDRESS = "1Mdqxe9WaiQLKnCorD7Ncu2VxZq9Cefn9qPKR4";
-		
+
 		const USER_STREAMS = array(
 				"USERS_CREDENTIALS" => "users_credentials",
 				"USERS_DETAILS" => "users_details",

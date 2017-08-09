@@ -8,7 +8,7 @@
 
 	try
 	{
-		
+
 		if(isset($_POST['username']))
 		{
 			$name = htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8');
@@ -16,7 +16,7 @@
 			$password = htmlspecialchars($_POST['password'], ENT_QUOTES, 'UTF-8');
 
 			$dbHelper = new DBHelper("", $_SERVER);
-			
+
 			if ($dbHelper->userExists($userName)) {
 				header("location:register.php?msg=5");
 				exit;
@@ -34,16 +34,16 @@
 			$dbHelper->grantPermissions($userName, $permissions);
 
 
-			// Granting write permission for Prime-Vault related stream to user
+			// Granting write permission for StrathVault related stream to user
 
 			$permissions = MultichainParams::VAULT_STREAMS['DATA']."."."write";
-			$dbHelper->grantPermissions($userName, $permissions);		
+			$dbHelper->grantPermissions($userName, $permissions);
 
 
-			// Granting write permission for Prime-Contract related stream to user
+			// Granting write permission for StrathContract related stream to user
 
 			$permissions = MultichainParams::CONTRACT_STREAMS['CONTRACT_DETAILS']."."."write";
-			$dbHelper->grantPermissions($userName, $permissions);		
+			$dbHelper->grantPermissions($userName, $permissions);
 			$permissions = MultichainParams::CONTRACT_STREAMS['CONTRACT_FILES']."."."write";
 			$dbHelper->grantPermissions($userName, $permissions);
 			$permissions = MultichainParams::CONTRACT_STREAMS['CONTRACT_SIGNATURES']."."."write";
@@ -52,7 +52,7 @@
 			$dbHelper->grantPermissions($userName, $permissions);
 			$permissions = MultichainParams::CONTRACT_STREAMS['CONTRACT_INVITED_SIGNEES']."."."write";
 			$dbHelper->grantPermissions($userName, $permissions);
-			
+
 
 			// Sending Yobicoin to user
 			$dbHelper->sendInitYobicoins($userName);
@@ -73,7 +73,7 @@
 			header("location:register.php?msg=8");
 		}
 
-		
+
 	}
 	catch(Exception $ex)
 	{

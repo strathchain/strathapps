@@ -24,7 +24,7 @@
 <div class="container theme-showcase" role="main">
 
     <header class="page-header">
-        <h2>PrimeVault</h2>
+        <h2>StrathVault</h2>
     </header>
 
     <div class="row">
@@ -56,7 +56,7 @@
 
                         <div class="row">
                             <div class="col-md-1"></div>
-                            
+
                             <!-- Output is printed in here -->
                             <div id="output" class="col-md-10">
                             </div>

@@ -16,9 +16,9 @@
 	                    <h2 class="panel-title">SIGN UP</h2>
 	                </header>
 					<div class="panel-body">
-						
+
 						<!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button> -->
-						<?php 
+						<?php
                             if(isset($_GET['msg']))
                             {
                                 if ($_GET['msg'] == '1') { echo "<div class='alert alert-danger'><strong>Error! Invalid email!!</strong>.</div>";}
@@ -53,7 +53,7 @@
 								<!-- <div class="col-sm-8">
 									<div class="checkbox-custom checkbox-default">
 										<input id="AgreeTerms" name="agreeterms" type="checkbox" required="true" />
-										<label for="AgreeTerms">I agree with <a href="Primechain Software.pdf">terms of use</a> <span class="required">*</span></label>
+										<label for="AgreeTerms">I agree with <a href="StrathChain Software.pdf">terms of use</a> <span class="required">*</span></label>
 									</div>
 								</div> -->
 								<div class="col-sm-12 text-center">
@@ -62,13 +62,12 @@
 								</div>
 							</div><br/>
 
-							<p class="text-center">Already have an account? <a href="login.php">Sign In!</a></p>
+							<p class="text-center">Already have an account? <a href="login.php">Sign in!</a></p>
 
 						</form>
 					</div>
 				</section>
 
-				<p class="text-center text-muted mt-md mb-md">&copy; Copyright 2017 Primechain Technologies Pvt. Ltd. All Rights Reserved.</p>
 			</div>
 
 			<div class="col-md-4"></div>

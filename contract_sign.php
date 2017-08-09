@@ -10,13 +10,13 @@
 <div class="container theme-showcase" role="main">
 
     <header class="page-header">
-        <h2>PrimeContract</h2>
+        <h2>StrathContract</h2>
     </header>
 
     <div class="row">
         <div class="col-md-10">
             <section class="panel panel-primary">
-            
+
                 <header class="panel-heading">
                     <h2 class="panel-title">Sign Contract</h2>
                 </header>
@@ -24,7 +24,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-11">
-                            
+
                             <input type="hidden" id="contract_id">
 
                             <div id="output_sign1">

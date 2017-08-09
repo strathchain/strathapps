@@ -1,8 +1,8 @@
-<?php 
+<?php
     session_start();
     ob_start();
     require_once('check-login.php');
-    include ("header-logged-in.php"); 
+    include ("header-logged-in.php");
 ?>
 
 <script type="text/javascript" src="js/contract.js"></script>
@@ -10,7 +10,7 @@
 <div class="container theme-showcase" role="main">
 
     <header class="page-header">
-        <h2>PrimeContract</h2>
+        <h2>StrathContract</h2>
     </header>
     <div class="row">
         <div class="col-md-12">
@@ -84,7 +84,7 @@
                                 /// -------------------------CONTRACT SIGNERS------------------------ ///
 
                                         $contractSignersItems = $dbHelper->getContractSignatures($contractID);
-                                        
+
                                         echo "<h3 style='color:#0066cc'><b><u>Signers</u></b></h3>";
                                         //echo "<tr><th>"."Signer ID"."</th><th>"."Signer Address"."</th><th>"."Signature"."</th></tr>";
 
@@ -131,7 +131,7 @@
                                 }
 
                             ?>
-                            
+
                         </div>
                     </div>
 

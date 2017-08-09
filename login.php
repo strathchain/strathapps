@@ -17,7 +17,7 @@
 	                </header>
 					<div class="panel-body">
 
-						<?php 
+						<?php
                             if(isset($_GET['msg']))
                             {
 
@@ -31,7 +31,7 @@
 
                             }
                         ?>
-                        
+
 						<form action="verify-login.php" method="post">
 							<div class="form-group mb-lg">
 								<label>Username</label>
@@ -66,13 +66,12 @@
 								</div>
 							</div><br/>
 
-							<p class="text-center">Don't have an account yet? <a href="register.php">Sign Up!</a></p>
+							<p class="text-center">Don't have an account yet? <a href="register.php">Sign up</a> using your Strathclyde University email!</p>
 
 						</form>
 					</div>
 				</section>
 
-				<p class="text-center text-muted mt-md mb-md">&copy; Copyright 2017 Primechain Technologies Pvt. Ltd. All Rights Reserved.</p>
 			</div>
 
 			<div class="col-md-4"></div>

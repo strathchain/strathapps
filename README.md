@@ -22,13 +22,21 @@ Creating an account
 * You will automatially be taken to the signin page at `http://<IP Address>/strathapps/login.php`
 * Enter your username and password to login.
 
-
-PrimeVault
+StrathWallet
 ------------
 
-1. PrimeVault is a simple blockchain powered document storage and retrieval system.
+1. StrathWallet is a simple blockchain powered wallet for Strathcoins, a smart asset.
 
-2. To access PrimeVault visit `http://<IP Address>/strathapps/vault_upload.php`
+2. To send Strathcoins, visit `http://<IP Address>/strathapps/ic_send_money.php`
+
+3. To view your transactions, visit `http://<IP Address>/strathapps/ic_view_history.php`
+
+StrathVault (experimental pre alpha, may not work)
+------------
+
+1. StrathVault is a simple blockchain powered document storage and retrieval system.
+
+2. To access StrathVault visit `http://<IP Address>/strathapps/vault_upload.php`
 
 3. Select a file to upload, add a description and click upload.
 
@@ -40,16 +48,16 @@ PrimeVault
   + Uploader  - can be clicked to view details
   + Block Hash - can be clicked to view details
   + Confirmations
-  + Date of Upload 
-  + Description 
+  + Date of Upload
+  + Description
   + Download Link
 
 6. To view / search uploads, visit `http://<IP Address>/strathapps/vault_download.php`
 
-PrimeContract
+StrathContract (experimental pre alpha, may not work)
 ------------
 
-1. PrimeContract is a simple blockchain powered system for digitally signng contracts.
+1. StrathContract is a simple blockchain powered system for digitally signing contracts.
 
 2. To upload a contract, visit `http://<IP Address>/strathapps/contract_upload.php`
 
@@ -60,13 +68,3 @@ PrimeContract
 5. To sign a contract for which you hve been invited, visit `http://<IP Address>/strathapps/contract_sign.php`
 
 6. To view details of a particular contract, visit `http://<IP Address>/strathapps/contract_view_details.php`
-
-
-StrathWallet
-------------
-
-1. StrathWallet is a simple blockchain powered wallet for Strathcoins, a smart asset.
-
-2. To send Strathcoins, visit `http://<IP Address>/strathapps/ic_send_money.php`
-
-3. To view your transactions, visit `http://<IP Address>/strathapps/ic_view_history.php`

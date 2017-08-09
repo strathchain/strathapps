@@ -10,7 +10,7 @@
 <div class="container theme-showcase" role="main">
 
     <header class="page-header">
-        <h2>PrimeContract</h2>
+        <h2>StrathContract</h2>
     </header>
 
     <div class="row">
@@ -37,7 +37,7 @@
                                     <span class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                     </span>
-                                    <input class="form-control" type="datetime-local" id="dou" name="dou" value="<?php date_default_timezone_set('Asia/Kolkata'); echo str_replace("/", "T", date('Y-m-d/H:i:s')); ?>" required /> 
+                                    <input class="form-control" type="datetime-local" id="dou" name="dou" value="<?php date_default_timezone_set('Europe/London'); echo str_replace("/", "T", date('Y-m-d/H:i:s')); ?>" required />
                                 </div>
                             </div>
                         </div>
