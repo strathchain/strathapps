@@ -17,6 +17,16 @@
 
 			$dbHelper = new DBHelper("", $_SERVER);
 
+			if (strpos($userName,"@strath.ac.uk") === false) {
+				header("location:register.php?msg=1");
+				exit;
+			}
+
+			if (!filter_var($userName, FILTER_VALIDATE_EMAIL)) {
+				header("location:register.php?msg=1");
+				exit;
+			}
+
 			if ($dbHelper->userExists($userName)) {
 				header("location:register.php?msg=5");
 				exit;

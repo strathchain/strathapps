@@ -21,31 +21,30 @@
 						<?php
                             if(isset($_GET['msg']))
                             {
-                                if ($_GET['msg'] == '1') { echo "<div class='alert alert-danger'><strong>Error! Invalid email!!</strong>.</div>";}
-                                if ($_GET['msg'] == '2') { echo "<div class='alert alert-danger'><strong>Error! Passwords do not match!!</strong>.</div>";}
-                                if ($_GET['msg'] == '3') { echo "<div class='alert alert-danger'><strong>Invalid Username!!</strong>.</div>";}
-                                if ($_GET['msg'] == '4') { echo "<div class='alert alert-danger'><strong> Invalid Password!!</strong>.</div>";}
+                                if ($_GET['msg'] == '1') { echo "<div class='alert alert-danger'><strong>Error! Invalid email!!</strong></div>";}
+                                if ($_GET['msg'] == '2') { echo "<div class='alert alert-danger'><strong>Error! Passwords do not match!!</strong></div>";}
+                                if ($_GET['msg'] == '3') { echo "<div class='alert alert-danger'><strong>Invalid Username!!</strong></div>";}
+                                if ($_GET['msg'] == '4') { echo "<div class='alert alert-danger'><strong> Invalid Password!!</strong></div>";}
                                 if ($_GET['msg'] == '5') { echo "<div class='alert alert-danger'><strong>Username already exists</strong>.</div>";}
-                                if ($_GET['msg'] == '6') { echo "<div class='alert alert-danger'><strong>Invalid name!!</strong>.</div>";}
-                                if ($_GET['msg'] == '7') { echo "<div class='alert alert-danger'><strong>An user account for this email id already exists in our database!!</strong>.</div>";}
-                                if ($_GET['msg'] == '8') { echo "<div class='alert alert-danger'><strong>Registration Error!! Please try again after sometime or contact the site administrator.</strong>.</div>";}
-
+                                if ($_GET['msg'] == '6') { echo "<div class='alert alert-danger'><strong>Invalid name!!</strong></div>";}
+                                if ($_GET['msg'] == '7') { echo "<div class='alert alert-danger'><strong>An user account for this email id already exists in our database!!</strong></div>";}
+                                if ($_GET['msg'] == '8') { echo "<div class='alert alert-danger'><strong>Registration Error!! Please try again after some time or contact the site administrator.</strong>.</div>";}
                             }
                         ?>
 
 						<form method="POST" action="verify-register.php">
 							<div>
-								<label for="name">Name <span class="required">*</span></label>
+								<label for="name">Your full name <span class="required">*</span></label>
 								<input id="name" name="name" type="text" class="form-control input-lg" required="true" />
 							</div><br/>
 
 							<div>
-								<label for="username">User Name <span class="required">*</span></label>
+								<label for="username">Email address (this will be your User Name) <span class="required">*</span></label>
 								<input id="username" name="username" type="text" class="form-control input-lg" required="true" />
 							</div><br/>
 
 							<div>
-								<label for="password">Password <span class="required">*</span></label>
+								<label for="password">Password (choose wisely, no resets!)<span class="required">*</span></label>
 								<input id="password" name="password" type="password" class="form-control input-lg" required="true" />
 							</div><br/><br/>
 
